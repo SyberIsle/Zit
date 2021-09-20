@@ -131,6 +131,19 @@ class Definition
     }
 
     /**
+     * Adds a constructor parameter
+     *
+     * @param mixed  $value
+     * @return $this
+     */
+    public function addParameter($value): Definition
+    {
+        $this->params[] = $value;
+
+        return $this;
+    }
+
+    /**
      * Clears all constructor parameters
      *
      * @return $this
