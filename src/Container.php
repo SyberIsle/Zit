@@ -106,6 +106,16 @@ class Container implements ContainerInterface, Serializable
     }
 
     /**
+     * @param string $name The name of the definition to retrieve
+     *
+     * @return Definition The requested definition
+     */
+    public function getDefinition(string $name): Definition
+    {
+        return $this->definitions[$name];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function serialize()
